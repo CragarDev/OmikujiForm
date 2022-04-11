@@ -1,6 +1,5 @@
 package com.cragardev.omikujiform.controllers;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpSession;
@@ -27,7 +26,8 @@ public class HomeController {
 	}
 
 	@PostMapping("/omikuji/process")
-	public String omikujiProcess(HttpSession session, @RequestParam(value = "number", defaultValue = "15") Integer number,
+	public String omikujiProcess(HttpSession session,
+			@RequestParam(value = "number", defaultValue = "15") Integer number,
 			@RequestParam(value = "city", defaultValue = "city") String city,
 			@RequestParam(value = "person", defaultValue = "person") String person,
 			@RequestParam(value = "hobby", defaultValue = "hobby") String hobby,
